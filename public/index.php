@@ -1,86 +1,122 @@
-<?php
-require_once 'db_connection.php';
+<?php require_once 'includes/header.php'; ?>
 
-// Müşterileri veritabanından çek
-try {
-    $stmt = $pdo->query('SELECT * FROM musteriler');
-    $musteriler = $stmt->fetchAll();
-} catch(PDOException $e) {
-    echo "Sorgu hatası: " . $e->getMessage();
-    die();
-}
-?>
+<section class="py-20 text-center">
+    <div class="container mx-auto px-4">
+        <h1 class="text-4xl md:text-5xl font-bold max-w-4xl mx-auto leading-tight">
+            Profesyonel Temizlik Hizmetleri Parmaklarınızın Ucunda
+        </h1>
+        <p class="mt-6 text-lg text-gray-600 max-w-2xl mx-auto">
+            Ev ve ofisiniz için uzman temizlik profesyonelleriyle bağlantı kurun. Kaliteli hizmet, güvenilir profesyoneller ve kusursuz sonuçlar.
+        </p>
+        <a href="#iletisim" class="inline-block mt-8 px-6 py-3 bg-blue-500 hover:bg-blue-600 text-white font-semibold rounded-lg transition-colors">
+            Hemen Başlayın
+        </a>
+    </div>
+</section>
 
-<!DOCTYPE html>
-<html lang="tr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Temizlik Hizmeti</title>
-    <link href="/styles.css" rel="stylesheet">
-</head>
-<body class="bg-gray-100">
-    <header class="bg-blue-500 text-white p-4">
-        <h1 class="text-2xl font-bold">Temizlik Hizmeti</h1>
-    </header>
-    <main class="container mx-auto mt-8 p-4">
-        <h2 class="text-xl font-semibold mb-4">Müşteri Listesi</h2>
-        
-        <div class="bg-white shadow-md rounded-lg overflow-hidden">
-            <table class="min-w-full">
-                <thead class="bg-gray-50">
-                    <tr>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">ID</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Ad</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Soyad</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Email</th>
-                        <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Telefon</th>
-                    </tr>
-                </thead>
-                <tbody class="bg-white divide-y divide-gray-200">
-                    <?php foreach ($musteriler as $musteri): ?>
-                        <tr>
-                            <td class="px-6 py-4 whitespace-nowrap"><?php echo htmlspecialchars($musteri['id']); ?></td>
-                            <td class="px-6 py-4 whitespace-nowrap"><?php echo htmlspecialchars($musteri['ad']); ?></td>
-                            <td class="px-6 py-4 whitespace-nowrap"><?php echo htmlspecialchars($musteri['soyad']); ?></td>
-                            <td class="px-6 py-4 whitespace-nowrap"><?php echo htmlspecialchars($musteri['email']); ?></td>
-                            <td class="px-6 py-4 whitespace-nowrap"><?php echo htmlspecialchars($musteri['telefon']); ?></td>
-                        </tr>
-                    <?php endforeach; ?>
-                </tbody>
-            </table>
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">Hizmetlerimiz</h2>
+        <div class="grid md:grid-cols-3 gap-8">
+            <?php
+            $services = [
+                [
+                    'icon' => 'fa-home',
+                    'title' => 'Ev Temizliği',
+                    'description' => 'Eviniz için profesyonel temizlik hizmetleri',
+                    'features' => [
+                        'Tüm odaların detaylı temizliği',
+                        'Mutfak ve banyo dezenfeksiyonu',
+                        'Zemin temizliği ve vakumlama',
+                        'Toz alma ve yüzey temizliği'
+                    ]
+                ],
+                [
+                    'icon' => 'fa-building',
+                    'title' => 'Boş Ev Temizliği',
+                    'description' => 'Boş mülkler için kapsamlı temizlik',
+                    'features' => [
+                        'Taşınma öncesi/sonrası temizlik',
+                        'Pencere ve çerçeve temizliği',
+                        'Dolap ve depo temizliği',
+                        'Zemin yenileme'
+                    ]
+                ],
+                [
+                    'icon' => 'fa-city',
+                    'title' => 'Ofis Temizliği',
+                    'description' => 'Ticari temizlik çözümleri',
+                    'features' => [
+                        'Çalışma alanı dezenfeksiyonu',
+                        'Ortak alan bakımı',
+                        'Tuvalet temizliği',
+                        'Atık yönetimi'
+                    ]
+                ]
+            ];
+
+            foreach ($services as $service): ?>
+                <div class="bg-white rounded-lg shadow-lg p-6">
+                    <div class="flex items-center gap-4 mb-4">
+                        <i class="fas <?php echo $service['icon']; ?> text-2xl text-blue-500"></i>
+                        <div>
+                            <h3 class="text-xl font-semibold"><?php echo $service['title']; ?></h3>
+                            <p class="text-sm text-gray-500 mt-1"><?php echo $service['description']; ?></p>
+                        </div>
+                    </div>
+                    <ul class="space-y-2">
+                        <?php foreach ($service['features'] as $feature): ?>
+                            <li class="text-sm flex items-center gap-2">
+                                <span class="h-1.5 w-1.5 bg-blue-500 rounded-full"></span>
+                                <?php echo $feature; ?>
+                            </li>
+                        <?php endforeach; ?>
+                    </ul>
+                </div>
+            <?php endforeach; ?>
         </div>
+    </div>
+</section>
 
-        <!-- Yeni Müşteri Ekleme Formu -->
-        <div class="mt-8">
-            <h3 class="text-lg font-semibold mb-4">Yeni Müşteri Ekle</h3>
+<section id="iletisim" class="py-16">
+    <div class="container mx-auto px-4">
+        <h2 class="text-3xl font-bold text-center mb-12">İletişim</h2>
+        <div class="max-w-md mx-auto">
             <form action="musteri_ekle.php" method="POST" class="space-y-4">
-                <div class="grid grid-cols-2 gap-4">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">Ad</label>
-                        <input type="text" name="ad" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">Soyad</label>
-                        <input type="text" name="soyad" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">Email</label>
-                        <input type="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700">Telefon</label>
-                        <input type="tel" name="telefon" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
-                    </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Ad</label>
+                    <input type="text" name="ad" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
                 </div>
                 <div>
-                    <button type="submit" class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded">
-                        Müşteri Ekle
+                    <label class="block text-sm font-medium text-gray-700">Soyad</label>
+                    <input type="text" name="soyad" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Email</label>
+                    <input type="email" name="email" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Telefon</label>
+                    <input type="tel" name="telefon" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                </div>
+                <div>
+                    <label class="block text-sm font-medium text-gray-700">Hizmet Türü</label>
+                    <select name="hizmet_turu" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <option value="">Seçiniz</option>
+                        <option value="ev">Ev Temizliği</option>
+                        <option value="bos_ev">Boş Ev Temizliği</option>
+                        <option value="ofis">Ofis Temizliği</option>
+                    </select>
+                </div>
+                <div>
+                    <button type="submit" class="w-full flex justify-center py-2 px-4 border border-transparent rounded-md shadow-sm text-sm font-medium text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                        Gönder
                     </button>
                 </div>
             </form>
         </div>
-    </main>
-</body>
-</html>
+    </div>
+</section>
+
+<?php require_once 'includes/footer.php'; ?>
 
