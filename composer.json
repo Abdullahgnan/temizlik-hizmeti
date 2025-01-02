@@ -1,0 +1,6 @@
+{
+    "require": {
+        "tailwindcss/tailwindcss": "^2.2"
+    }
+}
+
