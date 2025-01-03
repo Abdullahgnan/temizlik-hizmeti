@@ -34,7 +34,7 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Services Section -->
     <section class="py-16">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">Hizmet Detayları</h2>
@@ -47,18 +47,19 @@
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Toz alma ve süpürme
+                            <span>Toz alma ve süpürme</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Mobilya temizliği
+                            <span>Mobilya temizliği</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Halı ve koltuk temizliği
+                            <span>Halı ve koltuk temizliği</span>
                         </li>
                     </ul>
                 </div>
+
                 <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <div class="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-sink text-xl text-primary-500"></i>
@@ -67,18 +68,19 @@
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Banyo dezenfeksiyonu
+                            <span>Banyo dezenfeksiyonu</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Mutfak hijyeni
+                            <span>Mutfak hijyeni</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Fayans temizliği
+                            <span>Fayans temizliği</span>
                         </li>
                     </ul>
                 </div>
+
                 <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <div class="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-plus text-xl text-primary-500"></i>
@@ -87,15 +89,15 @@
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Cam temizliği
+                            <span>Cam temizliği</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Balkon temizliği
+                            <span>Balkon temizliği</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Dolap içi düzenleme
+                            <span>Dolap içi düzenleme</span>
                         </li>
                     </ul>
                 </div>
@@ -118,23 +120,12 @@
                         <input type="tel" name="phone" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Şehir</label>
-                        <select name="city" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500">
-                            <option value="">Seçiniz</option>
-                            <option value="istanbul">İstanbul</option>
-                            <option value="ankara">Ankara</option>
-                            <option value="izmir">İzmir</option>
-                        </select>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">E-posta</label>
+                        <input type="email" name="email" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500">
                     </div>
                     <div>
-                        <label class="block text-sm font-medium text-gray-700 mb-1">Ev Büyüklüğü</label>
-                        <select name="size" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500">
-                            <option value="">Seçiniz</option>
-                            <option value="1+1">1+1</option>
-                            <option value="2+1">2+1</option>
-                            <option value="3+1">3+1</option>
-                            <option value="4+1">4+1</option>
-                        </select>
+                        <label class="block text-sm font-medium text-gray-700 mb-1">Adres</label>
+                        <input type="text" name="address" required class="w-full p-3 border rounded-lg focus:ring-2 focus:ring-primary-500">
                     </div>
                     <div class="md:col-span-2">
                         <label class="block text-sm font-medium text-gray-700 mb-1">Notlar</label>

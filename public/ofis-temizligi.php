@@ -34,7 +34,7 @@
         </div>
     </section>
 
-    <!-- Features Section -->
+    <!-- Services Section -->
     <section class="py-16">
         <div class="container mx-auto px-4">
             <h2 class="text-3xl font-bold text-center mb-12">Hizmet Detayları</h2>
@@ -47,18 +47,19 @@
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Masa ve sandalye temizliği
+                            <span>Masa ve sandalye temizliği</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Elektronik ekipman temizliği
+                            <span>Elektronik ekipman temizliği</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Zemin temizliği
+                            <span>Zemin temizliği</span>
                         </li>
                     </ul>
                 </div>
+
                 <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <div class="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-coffee text-xl text-primary-500"></i>
@@ -67,18 +68,19 @@
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Toplantı odaları
+                            <span>Toplantı odaları</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Mutfak temizliği
+                            <span>Mutfak temizliği</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Dinlenme alanları
+                            <span>Dinlenme alanları</span>
                         </li>
                     </ul>
                 </div>
+
                 <div class="bg-white p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow">
                     <div class="w-12 h-12 bg-primary-50 rounded-lg flex items-center justify-center mb-4">
                         <i class="fas fa-plus text-xl text-primary-500"></i>
@@ -87,15 +89,15 @@
                     <ul class="space-y-2 text-gray-600">
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Halı yıkama
+                            <span>Halı yıkama</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Cam temizliği
+                            <span>Cam temizliği</span>
                         </li>
                         <li class="flex items-center gap-2">
                             <i class="fas fa-check text-primary-500"></i>
-                            Cephe temizliği
+                            <span>Cephe temizliği</span>
                         </li>
                     </ul>
                 </div>

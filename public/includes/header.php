@@ -26,34 +26,67 @@
 </head>
 <body class="min-h-screen flex flex-col">
     <header class="border-b bg-white shadow-sm">
-        <div class="container mx-auto px-4 h-16 flex items-center justify-between">
-            <a href="index.php" class="flex items-center gap-2">
-                <i class="fas fa-sparkles text-primary-500 text-xl"></i>
-                <div>
-                    <div class="font-semibold">PeraHizmet</div>
-                    <div class="text-xs text-gray-500">Profesyonel Temizlik</div>
+        <div class="container mx-auto px-4">
+            <!-- Top Bar -->
+            <div class="py-2 border-b">
+                <div class="flex justify-between items-center">
+                    <div class="text-sm text-gray-600">
+                        <span class="mr-4"><i class="fas fa-phone mr-1"></i> +90 (212) 555 0123</span>
+                        <span><i class="fas fa-envelope mr-1"></i> info@perahizmet.com</span>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="text-gray-600 hover:text-primary-500"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-primary-500"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="text-gray-600 hover:text-primary-500"><i class="fab fa-whatsapp"></i></a>
+                    </div>
                 </div>
-            </a>
+            </div>
+            
+            <!-- Main Navigation -->
+            <div class="py-4">
+                <div class="flex items-center justify-between">
+                    <a href="index.php" class="flex items-center gap-2">
+                        <i class="fas fa-sparkles text-primary-500 text-2xl"></i>
+                        <div>
+                            <div class="font-bold text-xl">PeraHizmet</div>
+                            <div class="text-xs text-gray-500">Profesyonel Temizlik</div>
+                        </div>
+                    </a>
 
-            <nav class="hidden md:flex items-center gap-8">
-                <a href="ev-temizligi.php" class="group relative text-sm hover:text-primary-500 transition-colors py-2">
-                    Ev Temizliği
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary-500 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
-                </a>
-                <a href="bos-ev-temizligi.php" class="group relative text-sm hover:text-primary-500 transition-colors py-2">
-                    Boş Ev Temizliği
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary-500 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
-                </a>
-                <a href="ofis-temizligi.php" class="group relative text-sm hover:text-primary-500 transition-colors py-2">
-                    Ofis Temizliği
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-primary-500 transform scale-x-0 group-hover:scale-x-100 transition-transform"></span>
-                </a>
-            </nav>
+                    <!-- Service Icons Navigation -->
+                    <nav class="hidden lg:flex items-center gap-8">
+                        <a href="ev-temizligi.php" class="group flex flex-col items-center gap-2 p-2 hover:text-primary-500 transition-colors">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary-50 rounded-lg group-hover:bg-primary-100 transition-colors">
+                                <i class="fas fa-home text-xl text-primary-500"></i>
+                            </div>
+                            <span class="text-sm font-medium">Ev Temizliği</span>
+                        </a>
+                        
+                        <a href="ofis-temizligi.php" class="group flex flex-col items-center gap-2 p-2 hover:text-primary-500 transition-colors">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary-50 rounded-lg group-hover:bg-primary-100 transition-colors">
+                                <i class="fas fa-building text-xl text-primary-500"></i>
+                            </div>
+                            <span class="text-sm font-medium">Ofis Temizliği</span>
+                        </a>
+                        
+                        <a href="bos-ev-temizligi.php" class="group flex flex-col items-center gap-2 p-2 hover:text-primary-500 transition-colors">
+                            <div class="w-12 h-12 flex items-center justify-center bg-primary-50 rounded-lg group-hover:bg-primary-100 transition-colors">
+                                <i class="fas fa-key text-xl text-primary-500"></i>
+                            </div>
+                            <span class="text-sm font-medium">Boş Ev Temizliği</span>
+                        </a>
+                    </nav>
 
-            <div class="flex items-center gap-2">
-                <button onclick="toggleLang()" class="px-3 py-1 text-sm rounded-full border border-primary-500 text-primary-500 hover:bg-primary-50 transition-colors">
-                    <?php echo isset($_COOKIE['lang']) && $_COOKIE['lang'] === 'EN' ? 'EN' : 'TR'; ?>
-                </button>
+                    <div class="flex items-center gap-4">
+                        <button onclick="toggleLang()" class="px-3 py-1 text-sm rounded-full border border-primary-500 text-primary-500 hover:bg-primary-50 transition-colors">
+                            <?php echo isset($_COOKIE['lang']) && $_COOKIE['lang'] === 'EN' ? 'EN' : 'TR'; ?>
+                        </button>
+                        <a href="#iletisim" class="hidden md:inline-flex items-center px-6 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors">
+                            <i class="fas fa-calendar-alt mr-2"></i>
+                            Randevu Al
+                        </a>
+                    </div>
+                </div>
             </div>
         </div>
     </header>
