@@ -1,0 +1,26 @@
+<?php
+return [
+    'book_now' => 'Randevu Al',
+    'home_cleaning' => 'Ev Temizliği',
+    'office_cleaning' => 'Ofis Temizliği',
+    'empty_house_cleaning' => 'Boş Ev Temizliği',
+    'professional_cleaning' => 'Profesyonel Temizlik',
+    'phone' => '+90 (212) 555 0123',
+    'email' => 'info@perahizmet.com',
+    'hero_title' => 'Profesyonel Temizlik Hizmetleri',
+    'hero_description' => 'Profesyonel ekibimiz ve titiz çalışma anlayışımızla, sizlere güvenceli hizmet veriyoruz.',
+    'contact_us' => 'İletişime Geç',
+    'our_services' => 'Hizmetlerimiz',
+    'services_description' => 'Ev ve iş yerleriniz için profesyonel temizlik çözümleri sunuyoruz',
+    'happy_customers' => 'Mutlu Müşteri',
+    'years_experience' => 'Yıllık Tecrübe',
+    'expert_staff' => 'Uzman Personel',
+    'customer_satisfaction' => 'Müşteri Memnuniyeti',
+    'staff_description' => 'Tüm personelimiz özenle seçilmiş, deneyimli ve güvenlik soruşturması yapılmış profesyonellerden oluşmaktadır.',
+    'contact_form_title' => 'Bizimle İletişime Geçin',
+    'contact_form_description' => 'Size en uygun temizlik hizmeti için hemen iletişime geçin',
+    'name' => 'Adınız',
+    'surname' => 'Soyadınız',
+    'message' => 'Mesajınız',
+    'send' => 'Gönder'
+]; 

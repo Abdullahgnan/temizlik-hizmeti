@@ -54,26 +54,12 @@
                     </a>
 
                     <!-- Service Icons Navigation -->
-                    <nav class="hidden lg:flex items-center gap-8">
-                        <a href="ev-temizligi.php" class="group flex flex-col items-center gap-2 p-2 hover:text-primary-500 transition-colors">
-                            <div class="w-12 h-12 flex items-center justify-center bg-primary-50 rounded-lg group-hover:bg-primary-100 transition-colors">
-                                <i class="fas fa-home text-xl text-primary-500"></i>
+                    <nav class="hidden lg:flex items-center space-x-8">
+                        <a href="/ev-temizligi.php" class="nav-item flex flex-col items-center text-white/90 hover:text-white">
+                            <div class="glass-effect w-12 h-12 rounded-xl flex items-center justify-center mb-1">
+                                <i class="fas fa-home text-lg"></i>
                             </div>
-                            <span class="text-sm font-medium">Ev Temizliği</span>
-                        </a>
-                        
-                        <a href="ofis-temizligi.php" class="group flex flex-col items-center gap-2 p-2 hover:text-primary-500 transition-colors">
-                            <div class="w-12 h-12 flex items-center justify-center bg-primary-50 rounded-lg group-hover:bg-primary-100 transition-colors">
-                                <i class="fas fa-building text-xl text-primary-500"></i>
-                            </div>
-                            <span class="text-sm font-medium">Ofis Temizliği</span>
-                        </a>
-                        
-                        <a href="bos-ev-temizligi.php" class="group flex flex-col items-center gap-2 p-2 hover:text-primary-500 transition-colors">
-                            <div class="w-12 h-12 flex items-center justify-center bg-primary-50 rounded-lg group-hover:bg-primary-100 transition-colors">
-                                <i class="fas fa-key text-xl text-primary-500"></i>
-                            </div>
-                            <span class="text-sm font-medium">Boş Ev Temizliği</span>
+                            <span class="text-sm">Ev Temizliği</span>
                         </a>
                     </nav>
 
@@ -83,7 +69,7 @@
                         </button>
                         <a href="#iletisim" class="hidden md:inline-flex items-center px-6 py-2 bg-primary-500 text-white rounded-lg hover:bg-primary-600 transition-colors">
                             <i class="fas fa-calendar-alt mr-2"></i>
-                            Randevu Al
+                            Randevu Alll
                         </a>
                     </div>
                 </div>
